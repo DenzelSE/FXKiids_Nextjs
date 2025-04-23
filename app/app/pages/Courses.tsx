@@ -11,42 +11,42 @@ const CoursesPage = () => {
   const courses = [
     {
       id: 1,
-      title: "The Codes: Trading Foundation",
+      title: "Free Sunday Classes",
       description: "Learn the foundations of successful trading strategies, technical analysis, and market psychology.",
-      price: 299,
+      price: "FREE",
       category: "beginner",
-      features: ["24 video lessons", "Trading workbook", "Community access"],
+      features: ["Trading codes", "Community access"],
     },
     {
       id: 2,
-      title: "Technical Analysis Mastery",
-      description: "Master the art of chart reading, pattern recognition, and technical indicators for better trading decisions.",
-      price: 399,
-      category: "intermediate",
-      features: ["18 video lessons", "Practice exercises", "Weekly live Q&A"],
+      title: "The Codes",
+      description: "Learn the foundations of successful trading strategies, technical analysis, and market psychology.",
+      price: 1000,
+      category: "beginner",
+      features: ["Trading workbook", "Community access"],
     },
     {
       id: 3,
-      title: "Risk Management & Psychology",
-      description: "Develop a robust risk management framework and understand the psychological aspects of trading.",
-      price: 349,
-      category: "intermediate",
-      features: ["16 video lessons", "Risk calculator tool", "Case studies"],
-    },
-    {
-      id: 4,
-      title: "VVIP Advanced Trading Strategies",
+      title: "VVIP mentorship",
       description: "Elite training covering advanced trading methods, institutional tactics, and mentorship (NFT required).",
-      price: 999,
+      price: 2000,
       category: "advanced",
-      features: ["32 video lessons", "One-on-one mentoring", "Proprietary indicators"],
+      features: ["12 video lessons", "One-on-one mentoring", "Proprietary indicators"],
       requiresNft: true,
     },
     {
-      id: 5,
-      title: "Synthetic Assets Trading",
+      id: 4,
+      title: "Synthetic Assets Trading - COMING SOON",
       description: "Learn how to trade synthetic assets in modern digital markets with specialized techniques.",
-      price: 499,
+      price: "N/A",
+      category: "advanced",
+      features: ["22 video lessons", "Market simulation access", "Strategy templates"],
+    },
+    {
+      id: 4,
+      title: "Cryptocurrencies - COMING SOON",
+      description: "Learn how to crypto assets in modern digital markets with specialized techniques.",
+      price: "N/A",
       category: "advanced",
       features: ["22 video lessons", "Market simulation access", "Strategy templates"],
     },
@@ -150,7 +150,7 @@ const CoursesPage = () => {
                 </div>
                 
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-2xl font-bold text-white">${course.price}</span>
+                  <span className="text-2xl font-bold text-white">R {course.price}</span>
                   <span className="text-gray-400 text-sm">Lifetime access</span>
                 </div>
                 
