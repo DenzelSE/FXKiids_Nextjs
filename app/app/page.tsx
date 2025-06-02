@@ -1,47 +1,29 @@
+import { Navigation } from "@/components/navigation"
+import { HeroSection } from "@/components/hero-section"
+import { ProductsSection } from "@/components/products-section"
+import { PricingSection } from "@/components/pricing-section"
+import { PartnersSection } from "@/components/partners-section"
+import { SocialSection } from "@/components/social-section"
+import { VVIPSection } from "@/components/vvip-section"
+import { CommunitySection } from "@/components/community-section"
+import { ContactSection } from "@/components/conctact-section"
+import { Footer } from "@/components/footer"
+import { AboutSection } from "@/components/about-section"
 
-"use client"
-import { Toaster } from "../components/ui/toaster";
-import { Toaster as Sonner } from "../components/ui/sonner";
-import { TooltipProvider } from "../components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Web3Provider } from "./context/Web3Context";
-import Navbar from "../components/layout/Navbar";
-import Footer from "../components/layout/Footer";
-import Index from "./pages/Index";
-import VvipAccess from "./pages/VvipAccess";
-import Courses from "./pages/Courses";
-import Socials from "./pages/Socials";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
-
-const queryClient = new QueryClient();
-
-const Home = () => (
-  <QueryClientProvider client={queryClient}>
-    <Web3Provider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <main className="flex-grow">
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/vvip" element={<VvipAccess />} />
-                <Route path="/courses" element={<Courses />} />
-                <Route path="/socials" element={<Socials />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </TooltipProvider>
-    </Web3Provider>
-  </QueryClientProvider>
-);
-
-export default Home;
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-black">
+      <Navigation />
+      <HeroSection />
+      <AboutSection />
+      <ProductsSection />
+      <PricingSection />
+      <PartnersSection />
+      <SocialSection />
+      <VVIPSection />
+      <CommunitySection />
+      <ContactSection />
+      <Footer />
+    </main>
+  )
+}
