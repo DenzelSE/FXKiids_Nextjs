@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "../ui/button";
-import { cn } from "../../lib/utils";
+import { cn } from "../../app/lib/utils";
 import { Crown } from "lucide-react";
 
 const Navbar = () => {

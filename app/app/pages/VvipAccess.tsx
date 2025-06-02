@@ -2,7 +2,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import { useWeb3 } from "../context/Web3Context";
-import { Button } from "../components/ui/button";
+import { Button } from "../../components/ui/button";
 import { toast } from "sonner";
 import { Crown } from "lucide-react";
 
