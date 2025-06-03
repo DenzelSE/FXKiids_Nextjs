@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Video, MessageCircle, FileText } from "lucide-react"
+import Image from "next/image"
 
 export function CommunitySection() {
   const features = [
@@ -23,8 +24,14 @@ export function CommunitySection() {
   ]
 
   return (
-    <section className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image src="/placeholder.svg?height=800&width=1920" alt="Community Background" fill className="object-cover" />
+        <div className="absolute inset-0 bg-gray-900/95" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Join Our Community</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
@@ -35,7 +42,7 @@ export function CommunitySection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-gray-800 border-gray-700">
+            <Card key={index} className="bg-gray-800/90 backdrop-blur-sm border-gray-700">
               <CardHeader>
                 <div className="text-red-500 mb-4">{feature.icon}</div>
                 <CardTitle className="text-white text-xl">{feature.title}</CardTitle>

@@ -3,11 +3,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin } from "lucide-react"
+import Image from "next/image"
 
 export function ContactSection() {
   return (
-    <section className="py-20 bg-black">
-      <div className="container mx-auto px-4">
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image src="/placeholder.svg?height=800&width=1920" alt="Contact Background" fill className="object-cover" />
+        <div className="absolute inset-0 bg-black/90" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">GET IN TOUCH</h2>
           <div className="w-16 h-1 bg-red-500 mx-auto mb-6" />
@@ -15,7 +22,7 @@ export function ContactSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <Card className="bg-gray-800 border-gray-700">
+          <Card className="bg-gray-800/90 backdrop-blur-sm border-gray-700">
             <CardHeader>
               <CardTitle className="text-white text-2xl">Contact Information</CardTitle>
             </CardHeader>
@@ -54,7 +61,7 @@ export function ContactSection() {
             </CardContent>
           </Card>
 
-          <Card className="bg-gray-800 border-gray-700">
+          <Card className="bg-gray-800/90 backdrop-blur-sm border-gray-700">
             <CardHeader>
               <CardTitle className="text-white text-2xl">Send us a Message</CardTitle>
             </CardHeader>
@@ -65,7 +72,7 @@ export function ContactSection() {
                     <label className="text-white text-sm mb-2 block">Name</label>
                     <Input
                       placeholder="Your Name"
-                      className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                      className="bg-gray-700/50 border-gray-600 text-white placeholder-gray-400"
                     />
                   </div>
                   <div>
@@ -73,7 +80,7 @@ export function ContactSection() {
                     <Input
                       type="email"
                       placeholder="your@email.com"
-                      className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                      className="bg-gray-700/50 border-gray-600 text-white placeholder-gray-400"
                     />
                   </div>
                 </div>
@@ -82,7 +89,7 @@ export function ContactSection() {
                   <label className="text-white text-sm mb-2 block">Subject</label>
                   <Input
                     placeholder="How can we help?"
-                    className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                    className="bg-gray-700/50 border-gray-600 text-white placeholder-gray-400"
                   />
                 </div>
 
@@ -91,7 +98,7 @@ export function ContactSection() {
                   <Textarea
                     placeholder="Your message here..."
                     rows={6}
-                    className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                    className="bg-gray-700/50 border-gray-600 text-white placeholder-gray-400"
                   />
                 </div>
 

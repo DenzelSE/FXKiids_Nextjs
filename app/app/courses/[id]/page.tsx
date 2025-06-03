@@ -13,14 +13,14 @@ interface CoursePageProps {
 }
 
 export default function CoursePage({ params }: CoursePageProps) {
-  // Mock course data - in real app, fetch based on params.id
+  
   const course = {
-    title: "The Codes: Trading Foundation",
+    title: "The Codes: Trading Strategy",
     description: "Learn the foundations of successful trading strategies, technical analysis, and market psychology.",
-    price: "$299",
-    students: "2847",
+    price: "R1300",
+    students: "500",
     rating: "4.8/5",
-    duration: "8 weeks",
+    duration: "2 weeks",
     level: "Beginner",
     language: "English",
     instructor: "FX Trading Expert",
@@ -28,17 +28,11 @@ export default function CoursePage({ params }: CoursePageProps) {
 
   const modules = [
     {
-      title: "Module 1: Introduction to Trading",
-      lessons: ["What is Trading?", "Market Basics", "Trading Psychology", "Setting Up Your Trading Environment"],
-    },
-    {
-      title: "Module 2: Technical Analysis Fundamentals",
-      lessons: ["Chart Types and Timeframes", "Support and Resistance", "Trend Analysis", "Candlestick Patterns"],
-    },
-    {
-      title: "Module 3: Risk Management",
-      lessons: ["Position Sizing", "Stop Loss Strategies", "Risk-Reward Ratios", "Portfolio Management"],
-    },
+      title: "Module: The Codes",
+      lessons: ["What are the Codes?", "Market Basics", "Trading setups", "Setting Up Your Trading Environment", "Fibs setups, Plutonic Swing to Swing setups",
+        "Trading News using the Codes", "Risk Management"
+      ],
+    }
   ]
 
   const benefits = [

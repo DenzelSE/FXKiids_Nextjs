@@ -5,12 +5,12 @@ export function AboutSection() {
   const stats = [
     {
       icon: <Users className="w-8 h-8" />,
-      number: "10,000+",
+      number: "2,000+",
       label: "Active Students",
     },
     {
       icon: <Award className="w-8 h-8" />,
-      number: "50+",
+      number: "3+",
       label: "Expert Instructors",
     },
     {
