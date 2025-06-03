@@ -10,8 +10,8 @@ export function ContactSection() {
     <section className="py-20 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Image src="/placeholder.svg?height=800&width=1920" alt="Contact Background" fill className="object-cover" />
-        <div className="absolute inset-0 bg-black/90" />
+        <Image src="/vvip.jpg" alt="Contact Background" fill className="object-cover" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">

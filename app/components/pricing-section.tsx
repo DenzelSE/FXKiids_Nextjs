@@ -7,13 +7,13 @@ export function PricingSection() {
   const plans = [
     {
       title: "Basic Trading Course",
-      price: "$299",
+      price: "R1300",
       badge: null,
       features: ["15 video lessons", "Trading strategies", "Market analysis", "Basic support"],
     },
     {
-      title: "Advanced Trading",
-      price: "$399",
+      title: "Synthetic Assets Trading",
+      price: "R2000",
       badge: null,
       features: [
         "25 video lessons",
@@ -24,8 +24,8 @@ export function PricingSection() {
       ],
     },
     {
-      title: "VVIP Advanced Trading Strategies",
-      price: "$349",
+      title: "VVIP Mentorship",
+      price: "R2000",
       badge: "NFT Required",
       features: [
         "Elite training covering advanced trading methods",
@@ -61,21 +61,6 @@ export function PricingSection() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-16">
-          <Card className="bg-gray-800 border-gray-700">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Synthetic Assets Trading</h3>
-              <p className="text-gray-300 mb-6">
-                Learn how to trade synthetic assets in modern digital markets with specialized techniques.
-              </p>
-              <div className="flex items-center text-gray-300 mb-4">
-                <Check className="w-4 h-4 text-green-500 mr-3" />
-                22 video lessons
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
